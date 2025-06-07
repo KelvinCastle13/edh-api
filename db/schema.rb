@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_07_151712) do
+ActiveRecord::Schema[7.2].define(version: 2025_06_07_171029) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "commanders", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.string "cmc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "creatures", force: :cascade do |t|
     t.string "name"
     t.string "color"
     t.string "cmc"
