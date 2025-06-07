@@ -1,0 +1,2 @@
+class CommandersController < ApplicationController
+end
